@@ -1,10 +1,8 @@
-import Navbar from "./components/Navbar";
 import CustomSwiper from "./components/CustomSwiper";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content text-center">
           <div className="max-w-md">
@@ -19,7 +17,21 @@ export default function Home() {
         </div>
       </div>
       <CustomSwiper />
-      
+      <div className="divider bg-base-200"></div>
+      <div className="hero bg-base-200 min-h-screen">
+        <div className="hero-content text-center">
+          <div className="max-w-md">
+            <h2 className="text-4xl font-bold">Stay Connected with Your Favorite Teams</h2>
+            <p className="py-6">
+              Our platform makes it easy to follow your favorite teams. 
+              Get real-time updates on match schedules, player stats, and team news. 
+              Never miss a beat with our comprehensive soccer calendar.
+            </p>
+            <button className="btn btn-primary">Learn More</button>
+          </div>
+        </div>
+      </div>
+
     </main>
   );
 }

@@ -5,6 +5,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import Image from 'next/image';
+import { ClubsLogos } from './ClubsLogos';
 
 const CustomSwiper = () => {
   return (
@@ -17,12 +19,11 @@ const CustomSwiper = () => {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        <SwiperSlide>Item 1</SwiperSlide>
-        <SwiperSlide>Item 2</SwiperSlide>
-        <SwiperSlide>Item 3</SwiperSlide>
-        <SwiperSlide>Item 4</SwiperSlide>
-        <SwiperSlide>Item 5</SwiperSlide>
-        <SwiperSlide>Item 6</SwiperSlide>
+        {ClubsLogos.map((logo, index) => (
+          <SwiperSlide key={index}>
+            <Image src={logo} alt={`Club logo ${index + 1}`}/>
+          </SwiperSlide>
+        ))}
         {/* Add more SwiperSlides as needed */}
       </Swiper>
       <style jsx>{`
